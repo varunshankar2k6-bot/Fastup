@@ -16,21 +16,16 @@ def create_student(student: Student):
 #Get
 @app.get("/student/{student_id}", response_model=StudentResponse)
 def get_student(student_id: int):
-    return {
+
+    student = {
         "id": student_id,
         "name": "John",
         "age": 20,
         "course": "Python",
-        "email": "john@gmail.com",
-        "address": {
-            "city": "Trivandrum",
-            "state": "Kerala"
-        },
-        "courses": [
-            "Python",
-            "FastAPI"
-        ]
+        "email": "john@gmail.com"
     }
+
+    return student
 
 
 # PUT
